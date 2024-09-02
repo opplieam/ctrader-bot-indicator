@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>7.2</LangVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AC0B692-EC20-4ECB-94AC-945D00116192}</ProjectGuid>
+    <ProjectTypeGuids>{DD87C1B2-3799-4CA2-93B6-5288EE928820};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cAlgo</RootNamespace>
+    <AssemblyName>HGL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="cAlgo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3499da3018340880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\API\cAlgo.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HGL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Indicators\Cyf_Ergodic_Candlestick_Oscillator\Cyf_Ergodic_Candlestick_Oscillator\Cyf_Ergodic_Candlestick_Oscillator.csproj">
+      <Project>{B1CF97E5-AF4A-4BC0-9C0E-50AD70CC5333}</Project>
+      <Name>Cyf_Ergodic_Candlestick_Oscillator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Indicators\DamianVolatometer\DamianVolatometer\DamianVolatometer.csproj">
+      <Project>{E3E6C70E-BB69-41BC-A443-3B23725C8619}</Project>
+      <Name>DamianVolatometer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Indicators\Kijun Sen\Kijun Sen\Kijun Sen.csproj">
+      <Project>{52ED3424-EC39-4E63-8B46-7E0F4CE1AC33}</Project>
+      <Name>Kijun Sen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Indicators\QualitativeQuantitativeE\QualitativeQuantitativeE\QualitativeQuantitativeE.csproj">
+      <Project>{C47E5554-0C85-4A42-9AD2-0EA96CA05DEE}</Project>
+      <Name>QualitativeQuantitativeE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Indicators\SSL Indicator\SSL Indicator\SSL Indicator.csproj">
+      <Project>{BF3C5968-445C-44CF-9C2C-DDCCA4D361C3}</Project>
+      <Name>SSL Indicator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Indicators\KAMASlope\KAMASlope\KAMASlope.csproj">
+      <Project>{97FB1F1A-20A6-497F-ADB7-CEB69188C7B8}</Project>
+      <Name>KAMASlope</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
